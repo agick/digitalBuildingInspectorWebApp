@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+.overlay-container {
+    z-index: 100;
+    position: fixed;
+    background-color: white;
+}
+
+#left-upper-toolbox {
+    width: 200px;
+
+    top: 0px;
+    left: 0px;
+}
+
+.panel-heading-with-button { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.panel-heading-with-button-text {
+    margin: 7px 0px 0px 15px;
+    font-size: 22px;
+}
+
+.panel-heading-with-button-button {
+    margin: 7px 10px 10px 0px;
+}

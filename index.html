@@ -1,0 +1,73 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
+
+  </head>
+  <body>
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/FlyControls.js"></script>
+    <script src="js/STLLoader.js"></script>
+    <script src="js/constants/materials.js"></script>
+    <script src="js/constants/constants.js"></script>
+    <script src="js/functions/getFileExtension.js"></script>
+    <script src="js/functions/getGeometryBoundingBox.js"></script>
+    <script src="js/functions/getGeometryBoundingBoxNormalized.js"></script>
+    <script src="js/functions/getNormalizedGeometryPositionArray.js"></script>
+    
+    
+    <div class="overlay-container" id="left-upper-toolbox">
+      <nav class="panel">
+        <div class="panel-heading-with-button">
+          <div class="panel-heading-with-button-text">Files</div>
+          <div class="panel-heading-with-button-button">
+            
+            <div class="file">
+              <label class="file-label">
+                <input class="file-input" id="fileInput" type="file">
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fa-solid fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Upload
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+          
+        </div>
+       <div id="filesList">
+        <p class="panel-block">
+          No files present
+        </p>
+       </div>
+        
+      </nav>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="js/htmlObjects.js"></script>
+    <script src="js/functions/worldobjects/lookAtWorldObject.js"></script>
+    <script src="js/functions/worldobjects/generateDistanceField.js"></script>
+    <script src="js/functions/worldobjects/vizualizeDistanceField.js"></script>
+    <script src="js/worldObjects.js"></script>
+    
+    <script src="./renderer.js"></script>
+
+    <script src="js/listeners/fileInputListener.js"></script>
+    <script src="js/listeners/windowResizeListener.js"></script>
+  </body>
+</html>
